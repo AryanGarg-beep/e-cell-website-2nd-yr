@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+<body>
+     <nav class="navbar">
+    <h2>SocialApp</h2>
+    <a href="index.html">Feed</a>
+  </nav>
+
+  <section class="profile">
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h2 id="username">Aryan Garg</h2>
+    <p id="bio">Tech enthusiast | Maker | Explorer</p>
+  </section>
+
+  <h3>My Posts</h3>
+  <main id="feed" class="feed"></main> <!-- profile-post wasn't working so i switched it to feed.-->
+
+  <h3>Upload a New Post</h3>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="text" name="user" placeholder="Your name" required>
+    <input type="text" name="caption" placeholder="Caption" required>
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload Post</button>
+  </form>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

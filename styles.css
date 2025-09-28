@@ -1,0 +1,51 @@
+body {
+  font-family: "lato", sans-serif;
+  margin: 0;
+  background: #1d1a1a;
+  font-style: normal;
+    color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgb(94, 83, 83);
+  border-bottom: 1px solid #ddd;
+}
+
+.feed {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.post {
+  background: rgb(76, 68, 68);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.post img {
+  width: 100%;
+  display: block;
+  align-items: center;
+}
+
+.post p {
+  padding: 1rem 1rem;
+}
+
+.profile {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.profile-pic {
+  width: 100px;
+  border-radius: 50%;
+}
