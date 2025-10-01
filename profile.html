@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Profile</title>
 </head>
@@ -25,13 +28,12 @@
   <main id="feed" class="feed"></main> <!-- profile-post wasn't working so i switched it to feed.-->
 
   <h3>Upload a New Post</h3>
-  <form id="uploadForm" enctype="multipart/form-data">
+  <form id="uploadForm" enctype="multipart/form-data" class="upload-form">
     <input type="text" name="user" placeholder="Your name" required>
     <input type="text" name="caption" placeholder="Caption" required>
     <input type="file" name="image" accept="image/*" required>
     <button type="submit">Upload Post</button>
   </form>
-</section>
 
 
 
