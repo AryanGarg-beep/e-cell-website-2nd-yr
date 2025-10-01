@@ -67,3 +67,45 @@ if (uploadForm) {
   });
 }
 
+const profilePhotoForm = document.getElementById("profile-photo");
+
+if (profilePhotoForm) {
+  profilePhotoForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(profilePhotoForm);
+
+    try {
+      const res = await fetch(`${BASE_URL}/profiles`, {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      alert("Profile updated!");
+
+      // 🔑 Update DOM elements
+      if (data.post) {
+        if (data.post.image) {
+          document.getElementById("profile-pic").src = `${BASE_URL}${data.post.image}`;
+        }
+        if (data.post.user) {
+          document.getElementById("username").textContent = data.post.user;
+        }
+        if (data.post.caption) {
+          document.getElementById("bio").textContent = data.post.caption;
+        }
+      }
+
+      profilePhotoForm.reset();
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update profile.");
+    }
+  });
+}
+
+
+
+

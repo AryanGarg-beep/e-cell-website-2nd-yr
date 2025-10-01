@@ -32,4 +32,17 @@ app.post("/posts", upload.single("image"), (req, res) => {
   res.status(201).json({ message: "Post added!", post: newPost });
 });
 
+let profiles = [];
+
+app.post("/profile", upload.single("image"), (req, res) => {
+  const newProfile = {
+    user: req.body.user,
+    photo: "/uploads/" + req.file.filename,
+    caption: req.body.caption
+  };
+  profiles.push(newProfile);
+  res.status(201).json({ message: "Profile photo updated!", profile: newProfile });
+});
+
+
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

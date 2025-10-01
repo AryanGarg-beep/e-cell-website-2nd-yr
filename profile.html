@@ -19,9 +19,19 @@
   </nav>
 
   <section class="profile">
-    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <img src="" alt="Profile Picture" class="profile-pic" id="profile-pic">
     <h2 id="username">Aryan Garg</h2>
     <p id="bio">Tech enthusiast | Maker | Explorer</p>
+
+    <h3>change profile photo</h3>
+  <form id="profile-photo" enctype="multipart/form-data" class="upload-form">
+    <input type="hidden" name="type" value="profile">
+    <input type="text" name="user" placeholder="name" required>
+    <input type="text" name="caption" placeholder="Caption" required>
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload Post</button>
+  </form>
+
   </section>
 
   <h3>My Posts</h3>
